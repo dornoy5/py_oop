@@ -6,14 +6,25 @@ class Human:
 
     def __str__(self) -> str:
         return f'first_name:{self.first_name} last name: {self.last_name}'
+class Test:
+    def __init__(self,type,grade) -> None:
+        type =""
+        grade =0
     
+
 class Student(Human):
+    
     def test(self):
+
         print(self.first_name ,"is doing a test")
 
+    
     def __init__(self,first_name, last_name="waga") -> None:
         super().__init__(first_name, last_name)
+        self.test_lst=[]
 
+    def add_test(self,type,grade):
+        self.test_lst.append(Test(type,grade))
 
 class Worker(Human):
     def work(self):
